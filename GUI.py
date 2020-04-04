@@ -1,23 +1,27 @@
 from tkinter import *
-import os
-os.system('clear')
 
 root = Tk()
 
+#Gives GUI window a title
 root.title('GUI')
-root.geometry("400x600")
+#Defines Size of GUI window
+root.geometry("400x50")
 
+#hello command, diplays text entered in the text widget
 def hello():
 	hello_label = Label(root, text="Hello " + myTextbox.get())
-	hello_label.pack()
+	hello_label.grid(row=1, column=1)
 
+#Label Widget
 myLabel = Label(root, text="Enter Your first name:")
-myLabel.pack()
+myLabel.grid(row=0, column=0)
 
+#Text Widget, takes in text from keyboard
 myTextbox = Entry(root, width=30)
-myTextbox.pack()
+myTextbox.grid(row=0, column=1)
 
-myButton = Button(root, text='Submit', command=hello)
-myButton.pack()
+#Button Widget, calls hello command
+myButton = Button(root, text='Submit', command=hello, bg="blue")
+myButton.grid(row=0, column=2)
 
 root.mainloop()
