@@ -7,6 +7,8 @@ root.title('Calculator')
 #Defines Size of GUI window
 #root.geometry("400x50")
 
+ 
+
 def button_divide():
 	first_number = textbox.get()
 	global f_num
